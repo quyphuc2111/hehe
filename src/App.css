@@ -144,9 +144,47 @@ button:disabled {
   margin: 1rem 0;
 }
 
-.viewer img {
+.viewer img,
+.viewer video {
   max-width: 100%;
   height: auto;
+}
+
+.preview {
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 1rem 0;
+  max-height: 200px;
+}
+
+.preview video {
+  width: 100%;
+  max-height: 200px;
+  object-fit: contain;
+}
+
+.room-code {
+  font-size: 2rem !important;
+  letter-spacing: 0.3rem;
+}
+
+.viewer-count {
+  margin-top: 0.5rem;
+  color: #4caf50;
+}
+
+.method-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+.method-section h3 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #888;
 }
 
 /* Scanner */

@@ -33,4 +33,5 @@ base64 = "0.22"
 tokio-tungstenite = "0.24"
 futures-util = "0.3"
 lazy_static = "1.5"
+uuid = { version = "1", features = ["v4"] }
 

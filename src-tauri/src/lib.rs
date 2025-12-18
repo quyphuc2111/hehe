@@ -1,4 +1,5 @@
 mod screen_share;
+mod signaling;
 
 use mdns_sd::{ServiceDaemon, ServiceEvent};
 use serde::Serialize;
@@ -12,6 +13,7 @@ use tokio::sync::Mutex;
 use tokio::time::timeout;
 
 use screen_share::{is_server_running, start_screen_server, stop_screen_server};
+use signaling::{start_signaling_server, stop_signaling_server};
 
 #[derive(Serialize, Clone)]
 pub struct HostInfo {
@@ -263,7 +265,9 @@ pub fn run() {
             scan_network,
             start_screen_server,
             stop_screen_server,
-            is_server_running
+            is_server_running,
+            start_signaling_server,
+            stop_signaling_server
         ])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");

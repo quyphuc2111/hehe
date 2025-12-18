@@ -4080,6 +4080,7 @@ dependencies = [
  "tauri-plugin-opener",
  "tokio",
  "tokio-tungstenite",
+ "uuid",
  "xcap",
 ]
 
