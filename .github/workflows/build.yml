@@ -6,6 +6,9 @@ on:
       - 'v*'
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   build:
     strategy:
@@ -49,7 +52,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tagName: ${{ github.ref_name }}
-          releaseName: 'Screen Share v__VERSION__'
+          releaseName: 'Screen Share ${{ github.ref_name }}'
           releaseBody: 'Download the installer for your platform below.'
           releaseDraft: true
           prerelease: false
